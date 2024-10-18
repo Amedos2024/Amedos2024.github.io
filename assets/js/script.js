@@ -29,7 +29,7 @@ const modalText = document.querySelector("[data-modal-text]");
 const testimonialsModalFunc = function () {
     modalContainer.classList.toggle("active");
     overlay.classList.toggle("active");
-}
+};
 
 // Add click event to all modal items
 for (let i = 0; i < testimonialsItem.length; i++) {
@@ -117,17 +117,29 @@ for (let i = 0; i < formInputs.length; i++) {
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
+// Set the default active page (About)
+const defaultActivePage = "about"; // Change this to whatever page you want as default
+document.querySelector(`article[data-page="${defaultActivePage}"]`).classList.remove('hidden');
+document.querySelector(`button[data-nav-link="${defaultActivePage}"]`).classList.add('active');
+
 // Add event to all nav links
 for (let i = 0; i < navigationLinks.length; i++) {
     navigationLinks[i].addEventListener("click", function () {
         // Hide all pages
-        pages.forEach(page => page.classList.add('hidden'));
+        pages.forEach(page => {
+            page.classList.add('hidden');  // Hide all sections
+        });
 
         // Remove active class from all buttons
-        navigationLinks.forEach(link => link.classList.remove('active'));
+        navigationLinks.forEach(link => {
+            link.classList.remove('active');
+        });
 
         // Show the selected page
-        const page = this.getAttribute('data-nav-link');
-        document.querySelector(`article[data-page="${page}"]`).classList.remove('hidden');
+        const pageToShow = this.getAttribute('data-nav-link');
+        document.querySelector(`article[data-page="${pageToShow}"]`).classList.remove('hidden');
 
-        // Add active class to the cli
+        // Add active class to the clicked button
+        this.classList.add('active');
+    });
+}
