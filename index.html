@@ -113,16 +113,16 @@
         </header>
         <section class="about-text">
           <p>
-            I am a passionate and analytical Junior Strategic Energy Consultant with a strong foundation in oil and energy, encompassing both economics and engineering. With a degree in Petroleum Engineering and a Master's in Energy Technology Economics and Management from IFP School in Paris, I have experience in analyzing business needs and implementing effective, data-driven solutions. My skills in strategic thinking within the energy sector enable me to navigate complex challenges and contribute to impactful decision-making.
+            I am a passionate and analytical Junior Strategic Energy Consultant with a strong foundation in oil and energy, encompassing both economics and engineering. With a degree in Petroleum Engineering, a Master's in Energy Technology Economics and Management from IFP School in Paris, and a Master's in Management from Audencia Business School, I have experience in analyzing business needs and implementing effective, data-driven solutions. My skills in strategic thinking within the energy sector enable me to navigate complex challenges and contribute to impactful decision-making.
           </p>
         </section>
 
         <section class="service">
-          <h3 class="h3 service-title">What I do</h3>
+          <h3 class="h3 service-title">What I Do</h3>
           <ul class="service-list">
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="./assets/images/icon-analysis.svg" alt="analysis icon" width="40">
+                <img src="./assets/images/icon-analysis.svg" alt="Data Analysis icon" width="40">
               </div>
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Data Analysis</h4>
@@ -131,7 +131,7 @@
             </li>
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="./assets/images/icon-strategy.svg" alt="strategy icon" width="40">
+                <img src="./assets/images/icon-strategy.svg" alt="Strategic Planning icon" width="40">
               </div>
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Strategic Planning</h4>
@@ -140,7 +140,7 @@
             </li>
             <li class="service-item">
               <div class="service-icon-box">
-                <img src="./assets/images/icon-research.svg" alt="research icon" width="40">
+                <img src="./assets/images/icon-research.svg" alt="Market Research icon" width="40">
               </div>
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Market Research</h4>
@@ -257,6 +257,7 @@
         </section>
       </article>
 
+      <!-- Portfolio Section -->
       <article class="portfolio hidden" data-page="portfolio">
         <header>
           <h2 class="h2 article-title">Portfolio</h2>
@@ -266,6 +267,7 @@
         </section>
       </article>
 
+      <!-- Contact Section -->
       <article class="contact hidden" data-page="contact">
         <header>
           <h2 class="h2 article-title">Contact</h2>
@@ -309,6 +311,9 @@
         button.classList.add('active');
       });
     });
+
+    // Show the About page by default
+    document.querySelector(`article[data-page="about"]`).classList.remove('hidden');
   </script>
 
   <script src="./assets/js/script.js"></script>
