@@ -143,3 +143,24 @@ for (let i = 0; i < navigationLinks.length; i++) {
         this.classList.add('active');
     });
 }
+
+document.querySelectorAll('.navbar-link').forEach(button => {
+    button.addEventListener('click', () => {
+        // Hide all articles
+        document.querySelectorAll('article').forEach(article => {
+            article.classList.add('hidden');  // This hides all sections
+        });
+
+        // Remove active class from all buttons
+        document.querySelectorAll('.navbar-link').forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        // Show the selected article
+        const page = button.getAttribute('data-nav-link');
+        document.querySelector(`article[data-page="${page}"]`).classList.remove('hidden');  // This shows the selected section
+
+        // Add active class to the clicked button
+        button.classList.add('active');
+    });
+});
