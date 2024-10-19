@@ -7,9 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ahmede Sidi Abderrahmane - Personal Portfolio</title>
 
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
@@ -17,22 +14,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
+    /* Adjust the font size of the full name */
     .name {
-      font-size: 14px; /* Smaller font size */
-      white-space: normal; /* Allow wrapping */
-      word-break: break-word; /* Break long words */
+      font-size: 14px; /* Smaller font size for the full name */
+      white-space: normal; /* Allow the name to wrap */
+      word-break: break-word; /* Ensure long names are wrapped */
     }
 
-    .info-content {
-      width: 100%; /* Ensure full width */
-    }
-
+    /* Set the default state of sections (hidden) */
     .main-content section {
-      display: none; /* Initially hide all sections */
+      display: none;
     }
 
+    /* Ensure the active section is visible */
     .main-content section.active {
-      display: block; /* Show the active section */
+      display: block;
     }
 
     .about-image {
@@ -43,16 +39,6 @@
       margin-bottom: 20px;
     }
 
-    .about-text p {
-      text-align: justify;
-    }
-
-    /* Ensure the main content area doesn't get cut off */
-    .main-content {
-      margin-left: 250px; /* Adjust this according to your layout */
-    }
-
-    /* Ensure that all sections fit properly */
     section {
       padding: 20px;
     }
@@ -68,34 +54,22 @@
     <aside class="sidebar" data-sidebar>
 
       <div class="sidebar-info">
-
         <figure class="avatar-box">
           <img src="assets/images/my-avatar.jpg" alt="Ahmede Sidi Abderrahmane" class="about-image">
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Ahmede Sidi Abderrahmane">Ahmede Sidi Abderrahmane</h1>
+          <h1 class="name">Ahmede Sidi Abderrahmane</h1>
           <p class="title">Junior Strategic Energy Consultant</p>
         </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
       </div>
 
       <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
         <ul class="contacts-list">
-
           <li class="contact-item">
             <div class="icon-box">
               <ion-icon name="mail-outline"></ion-icon>
             </div>
-
             <div class="contact-info">
               <p class="contact-title">Email</p>
               <a href="mailto:ahmedesidiabderrahmane@gmail.com" class="contact-link">ahmedesidiabderrahmane@gmail.com</a>
@@ -106,7 +80,6 @@
             <div class="icon-box">
               <ion-icon name="phone-portrait-outline"></ion-icon>
             </div>
-
             <div class="contact-info">
               <p class="contact-title">Phone</p>
               <a href="tel:+33780843930" class="contact-link">+33 7 80 84 39 30</a>
@@ -117,25 +90,12 @@
             <div class="icon-box">
               <ion-icon name="location-outline"></ion-icon>
             </div>
-
             <div class="contact-info">
               <p class="contact-title">Location</p>
               <address>Bezons, France</address>
             </div>
           </li>
-
         </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/ahmede-s-99b70314b/" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-        </ul>
-
       </div>
 
     </aside>
@@ -163,153 +123,41 @@
 
       <!-- About Section -->
       <section id="about" class="active">
-        <header>
-          <h2 class="h2 article-title">About Me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            I am a passionate and analytical Junior Strategic Energy Consultant with a strong foundation in oil and energy, 
-            encompassing both economics and engineering. With a degree in Petroleum Engineering and a Master's in Energy Technology Economics and Management from IFP School in Paris, I have experience in analyzing business needs 
-            and implementing effective, data-driven solutions. My skills in strategic thinking within the energy sector 
-            enable me to navigate complex challenges and contribute to impactful decision-making.
-          </p>
-        </section>
-
-        <section class="what-i-do">
-          <h3 class="h3">What I Do</h3>
-          <ul class="service-list">
-            <li class="service-item">
-              <div class="service-icon-box">
-                <ion-icon name="analytics-outline"></ion-icon>
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Market Research</h4>
-                <p class="service-item-text">I conduct thorough market research to provide valuable insights for decision-making in the energy sector.</p>
-              </div>
-            </li>
-
-            <li class="service-item">
-              <div class="service-icon-box">
-                <ion-icon name="clipboard-outline"></ion-icon>
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Strategic Planning</h4>
-                <p class="service-item-text">I excel at creating strategic plans that align business objectives with the latest energy trends and insights.</p>
-              </div>
-            </li>
-
-            <li class="service-item">
-              <div class="service-icon-box">
-                <ion-icon name="stats-chart-outline"></ion-icon>
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Data Analysis</h4>
-                <p class="service-item-text">Using advanced data analysis tools, I interpret energy market data to enhance performance and outcomes.</p>
-              </div>
-            </li>
-          </ul>
-        </section>
-
+        <h2>About Me</h2>
+        <p>
+          I am a passionate and analytical Junior Strategic Energy Consultant with a strong foundation in oil and energy,
+          encompassing both economics and engineering. With a degree in Petroleum Engineering and a Master's in Energy
+          Technology Economics and Management from IFP School in Paris, I have experience in analyzing business needs
+          and implementing effective, data-driven solutions.
+        </p>
       </section>
 
       <!-- Resume Section -->
       <section id="resume">
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">IFP School, Paris</h4>
-              <span>2022 — 2023</span>
-              <p class="timeline-text">Master of Science in Energy Technology Economics and Management</p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Audencia Business School, Nantes</h4>
-              <span>Sept 2021 — Dec 2021</span>
-              <p class="timeline-text">Master of Science in Management in the Energy Industry</p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">National Engineering School of Sfax, Tunisia</h4>
-              <span>2019 — 2021</span>
-              <p class="timeline-text">Bachelor of Engineering in Georesources and Environment</p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Polytechnic School of Nouakchott, Mauritania</h4>
-              <span>2017 — 2019</span>
-              <p class="timeline-text">Bachelor of Engineering in Oil and Gas</p>
-            </li>
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="briefcase-outline"></ion-icon>
-            </div>
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">TotalEnergies, Paris</h4>
-              <span>2023 — 2024</span>
-              <p class="timeline-text">Business Analyst – Carbon Neutrality Strategy & CCS</p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">ScanToSolve</h4>
-              <span>2022 — 2023</span>
-              <p class="timeline-text">Business Analyst & Developer</p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">LR3E Laboratory, Sfax</h4>
-              <span>Feb 2021 — Jul 2021</span>
-              <p class="timeline-text">Reservoir Engineer Intern</p>
-            </li>
-          </ol>
-        </section>
-
+        <h2>Resume</h2>
+        <h3>Education</h3>
+        <p>Master of Science in Energy Technology Economics and Management, IFP School (2022 - 2023)</p>
+        <p>Master of Science in Management in the Energy Industry, Audencia Business School (2021)</p>
+        <p>Bachelor of Engineering in Georesources and Environment, National Engineering School of Sfax (2019 - 2021)</p>
+        <p>Bachelor of Engineering in Oil and Gas, Polytechnic School of Nouakchott (2017 - 2019)</p>
+        <h3>Experience</h3>
+        <p>Business Analyst at TotalEnergies, Paris (2023 - 2024)</p>
+        <p>Business Analyst & Developer at ScanToSolve (2022 - 2023)</p>
+        <p>Reservoir Engineer Intern at LR3E Laboratory (2021)</p>
       </section>
 
       <!-- Portfolio Section -->
       <section id="portfolio">
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-        <section class="projects">
-          <p>Coming Soon...</p>
-        </section>
+        <h2>Portfolio</h2>
+        <p>Coming Soon...</p>
       </section>
 
       <!-- Contact Section -->
       <section id="contact">
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-        <section class="contact-form">
-          <h3 class="h3 form-title">Contact Form</h3>
-          <form action="#" class="form" data-form>
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-            <button class="form-btn" type="submit">
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-          </form>
-        </section>
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:ahmedesidiabderrahmane@gmail.com">ahmedesidiabderrahmane@gmail.com</a></p>
+        <p>Phone: <a href="tel:+33780843930">+33 7 80 84 39 30</a></p>
+        <p>Location: Bezons, France</p>
       </section>
 
     </div>
@@ -317,33 +165,26 @@
   </main>
 
   <!-- JavaScript Links -->
-  <script src="./assets/js/script.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-  <!-- JavaScript for Navbar Links -->
+  <!-- JavaScript to manage navigation -->
   <script>
     const navbarLinks = document.querySelectorAll(".navbar-link");
     const sections = document.querySelectorAll("section");
 
     navbarLinks.forEach(link => {
       link.addEventListener("click", () => {
-        const targetSection = document.getElementById(link.getAttribute("data-nav-link"));
+        // Remove active class from all sections and navbar items
+        sections.forEach(section => section.classList.remove("active"));
+        navbarLinks.forEach(nav => nav.classList.remove("active"));
 
-        sections.forEach(section => {
-          section.classList.remove("active");
-        });
-
-        navbarLinks.forEach(nav => {
-          nav.classList.remove("active");
-        });
-
-        document.getElementById(targetSection).classList.add("active");
+        // Activate the clicked section and navbar item
+        document.getElementById(link.getAttribute("data-nav-link")).classList.add("active");
         link.classList.add("active");
       });
     });
 
-    // Ensure that the first section (about) is shown on page load
+    // Show the "About" section by default
     document.getElementById('about').classList.add('active');
   </script>
 
