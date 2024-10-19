@@ -24,7 +24,7 @@
 
     /* Set the text color for better visibility */
     .title, .contact-link, .contact-title, .address, .navbar-link {
-      color: #ffffff; /* Set text to white or light color */
+      color: #f1f1f1; /* Brighter color */
     }
 
     /* Highlight active navbar link */
@@ -57,6 +57,7 @@
 
     section {
       padding: 20px;
+      color: #f1f1f1; /* Brighter text color for all sections */
     }
 
     /* Styling for experience and education lists */
@@ -76,7 +77,7 @@
 
     .company, .institution {
       font-style: italic;
-      color: #ffffff;
+      color: #f1f1f1; /* Brighter for better visibility */
     }
 
     .date {
@@ -86,11 +87,50 @@
     .responsibilities {
       margin-top: 5px;
       padding-left: 20px;
-      color: #ffffff;
+      color: #f1f1f1;
     }
 
     .responsibilities li {
       margin-bottom: 5px;
+    }
+
+    /* Contact form style to match the uploaded image */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .form-input {
+      padding: 10px;
+      background-color: #333; /* Darker background for the input */
+      color: #f1f1f1;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .form-btn {
+      background-color: #333;
+      color: #f1f1f1;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .form-btn:hover {
+      background-color: #00bcd4;
+      color: #fff;
+    }
+
+    .form-btn ion-icon {
+      font-size: 18px;
     }
   </style>
 </head>
@@ -180,6 +220,13 @@
           Technology Economics and Management from IFP School in Paris, I have experience in analyzing business needs
           and implementing effective, data-driven solutions.
         </p>
+
+        <h3>What I Do</h3>
+        <ul class="service-list">
+          <li>Market Research: Conduct thorough market research to provide valuable insights for decision-making in the energy sector.</li>
+          <li>Strategic Planning: Create strategic plans that align business objectives with the latest energy trends and insights.</li>
+          <li>Data Analysis: Use advanced data analysis tools to interpret energy market data and enhance performance.</li>
+        </ul>
       </section>
 
       <!-- Resume Section -->
@@ -253,10 +300,18 @@
 
       <!-- Contact Section -->
       <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:ahmedesidiabderrahmane@gmail.com">ahmedesidiabderrahmane@gmail.com</a></p>
-        <p>Phone: <a href="tel:+33780843930">+33 7 80 84 39 30</a></p>
-        <p>Location: Bezons, France</p>
+        <h2>Contact Form</h2>
+
+        <section class="contact-form">
+          <input type="text" name="fullname" class="form-input" placeholder="Full name" required>
+          <input type="email" name="email" class="form-input" placeholder="Email address" required>
+          <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
+          <button class="form-btn" type="submit">
+            <ion-icon name="paper-plane"></ion-icon>
+            <span>Send Message</span>
+          </button>
+        </section>
+
       </section>
 
     </div>
