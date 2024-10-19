@@ -5,28 +5,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vCard - Personal Portfolio</title>
+  <title>Ahmede Sidi Abderrahmane - Personal Portfolio</title>
 
-  <!--
-    - favicon
-  -->
+  <!-- Favicon -->
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
 
-  <!--
-    - custom css link
-  -->
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     .name {
-      font-size: 18px; /* Slightly smaller font size */
+      font-size: 16px; /* Smaller font size */
       white-space: normal; /* Allow wrapping */
       word-break: break-word; /* Break long words */
     }
@@ -42,27 +34,33 @@
     .main-content section.active {
       display: block; /* Show the active section */
     }
+
+    .about-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      text-align: justify;
+    }
   </style>
 </head>
 
 <body>
 
-  <!--
-    - #MAIN
-  -->
-
+  <!-- Main Container -->
   <main>
 
-    <!--
-      - #SIDEBAR
-    -->
-
+    <!-- Sidebar -->
     <aside class="sidebar" data-sidebar>
 
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="assets/images/my-avatar.jpg" alt="Ahmede Sidi Abderrahmane" width="80">
+          <img src="assets/images/my-avatar.jpg" alt="Ahmede Sidi Abderrahmane" class="about-image">
         </figure>
 
         <div class="info-content">
@@ -132,42 +130,28 @@
 
     </aside>
 
-    <!--
-      - #main-content
-    -->
-
+    <!-- Main Content -->
     <div class="main-content">
 
-      <!--
-        - #NAVBAR
-      -->
-
+      <!-- Navbar -->
       <nav class="navbar">
-
         <ul class="navbar-list">
           <li class="navbar-item">
             <button class="navbar-link active" data-nav-link="about">About</button>
           </li>
-
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link="resume">Resume</button>
           </li>
-
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link="portfolio">Portfolio</button>
           </li>
-
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link="contact">Contact</button>
           </li>
         </ul>
-
       </nav>
 
-      <!--
-        - #ABOUT
-      -->
-
+      <!-- About Section -->
       <section id="about" class="active">
         <header>
           <h2 class="h2 article-title">About Me</h2>
@@ -182,12 +166,8 @@
           </p>
         </section>
 
-        <!--
-          - What I Do section
-        -->
         <section class="what-i-do">
           <h3 class="h3">What I Do</h3>
-
           <ul class="service-list">
             <li class="service-item">
               <div class="service-icon-box">
@@ -223,22 +203,17 @@
 
       </section>
 
-      <!--
-        - #RESUME
-      -->
-
+      <!-- Resume Section -->
       <section id="resume">
         <header>
           <h2 class="h2 article-title">Resume</h2>
         </header>
 
         <section class="timeline">
-
           <div class="title-wrapper">
             <div class="icon-box">
               <ion-icon name="book-outline"></ion-icon>
             </div>
-
             <h3 class="h3">Education</h3>
           </div>
 
@@ -248,15 +223,18 @@
               <span>2022 — 2023</span>
               <p class="timeline-text">Master of Science in Energy Technology Economics and Management</p>
             </li>
-
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">National Engineering School of Sfax</h4>
+              <h4 class="h4 timeline-item-title">Audencia Business School, Nantes</h4>
+              <span>Sept 2021 — Dec 2021</span>
+              <p class="timeline-text">Master of Science in Management in the Energy Industry</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">National Engineering School of Sfax, Tunisia</h4>
               <span>2019 — 2021</span>
               <p class="timeline-text">Bachelor of Engineering in Georesources and Environment</p>
             </li>
-
             <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Polytechnic School of Nouakchott</h4>
+              <h4 class="h4 timeline-item-title">Polytechnic School of Nouakchott, Mauritania</h4>
               <span>2017 — 2019</span>
               <p class="timeline-text">Bachelor of Engineering in Oil and Gas</p>
             </li>
@@ -265,64 +243,51 @@
         </section>
 
         <section class="timeline">
-
           <div class="title-wrapper">
             <div class="icon-box">
               <ion-icon name="briefcase-outline"></ion-icon>
             </div>
-
             <h3 class="h3">Experience</h3>
           </div>
 
           <ol class="timeline-list">
-
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">TotalEnergies, Paris</h4>
               <span>2023 — 2024</span>
               <p class="timeline-text">Business Analyst – Carbon Neutrality Strategy & CCS</p>
             </li>
-
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">ScanToSolve</h4>
               <span>2022 — 2023</span>
               <p class="timeline-text">Business Analyst & Developer</p>
             </li>
-
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">LR3E Laboratory, Sfax</h4>
+              <span>Feb 2021 — Jul 2021</span>
+              <p class="timeline-text">Reservoir Engineer Intern</p>
+            </li>
           </ol>
-
         </section>
 
       </section>
 
-      <!--
-        - #PORTFOLIO
-      -->
-
+      <!-- Portfolio Section -->
       <section id="portfolio">
         <header>
           <h2 class="h2 article-title">Portfolio</h2>
         </header>
-
         <section class="projects">
-
           <p>Coming Soon...</p>
-
         </section>
-
       </section>
 
-      <!--
-        - #CONTACT
-      -->
-
+      <!-- Contact Section -->
       <section id="contact">
         <header>
           <h2 class="h2 article-title">Contact</h2>
         </header>
-
         <section class="contact-form">
           <h3 class="h3 form-title">Contact Form</h3>
-
           <form action="#" class="form" data-form>
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
@@ -335,25 +300,18 @@
             </button>
           </form>
         </section>
-
       </section>
 
     </div>
 
   </main>
 
-  <!--
-    - custom js link
-  -->
+  <!-- JavaScript Links -->
   <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-  <!-- JavaScript for Navbar Link Switching -->
+  <!-- JavaScript for Navbar Links -->
   <script>
     const navbarLinks = document.querySelectorAll(".navbar-link");
     const sections = document.querySelectorAll("section");
@@ -365,7 +323,7 @@
         sections.forEach(section => {
           section.classList.remove("active");
         });
-        
+
         navbarLinks.forEach(nav => {
           nav.classList.remove("active");
         });
