@@ -1,25 +1,38 @@
-<form class="contact-form" method="POST" action="New Text Document.php">
-
-    <?php
-if($_SERVER["REQUEST_METHOD"] == "POST") {
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get form data
     $name = $_POST['fullname'];
     $email = $_POST['email'];
     $message = $_POST['message'];
 
-    // The email where you'll receive the contact form submissions
-    $to = "ahmedesidiabderrahmane@gmail.com";
-    $subject = "Contact Form Submission from $name";
-    $body = "You have received a new message from your website contact form.\n\n".
-            "Name: $name\n".
-            "Email: $email\n".
-            "Message:\n$message";
-    $headers = "From: $email";
+    // Validate form data
+    if (!empty($name) && !empty($email) && !empty($message)) {
+        
+        // Set the recipient email address
+        $to = "ahmedesidiabderrahmane@gmail.com";  // Replace with your email address
 
-    // Send the email
-    if(mail($to, $subject, $body, $headers)) {
-        echo "Message sent successfully!";
+        // Set the email subject
+        $subject = "Contact Form Submission from $name";
+
+        // Build the email content
+        $email_content = "Name: $name\n";
+        $email_content .= "Email: $email\n\n";
+        $email_content .= "Message:\n$message\n";
+
+        // Set the email headers
+        $headers = "From: $email";
+
+        // Send the email
+        if (mail($to, $subject, $email_content, $headers)) {
+            // Success
+            echo "Thank you! Your message has been sent.";
+        } else {
+            // Error
+            echo "Oops! Something went wrong, and we couldn't send your message.";
+        }
+
     } else {
-        echo "Failed to send the message.";
+        echo "Please fill in all fields.";
     }
 }
 ?>
