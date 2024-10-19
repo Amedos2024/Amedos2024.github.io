@@ -98,103 +98,22 @@
             color: #b0bec5;
         }
 
-        /* Contact form styling */
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #333;
-            border-radius: 5px;
-        }
-
-        .form-input {
-            padding: 10px;
-            background-color: #444;
-            color: #f1f1f1;
-            border: none;
-            border-radius: 5px;
-            width: 100%;
-        }
-
-        .form-btn {
-            background-color: #00bcd4;
-            color: #fff;
-            padding: 12px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 600;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .form-btn ion-icon {
-            font-size: 18px;
-            margin-right: 8px;
-        }
-
-        /* Navbar styling */
-        .navbar {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 40px;
-        }
-
-        .navbar-list {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-        }
-
-        .navbar-link {
-            color: #f1f1f1;
-            cursor: pointer;
-            padding: 10px 20px;
-            font-weight: 600;
-            background-color: #444;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-
-        .navbar-link.active {
-            background-color: #00bcd4;
-        }
-
-        section {
-            margin-bottom: 40px;
-        }
-
-        /* General layout */
-        .main-content {
-            padding: 20px;
-        }
-
-        .active {
-            display: block;
-        }
-
-        section {
+        .description {
             display: none;
+            margin-top: 10px;
+            padding-left: 20px;
         }
 
-        /* Portfolio Image Styling */
-        .portfolio-item {
-            display: inline-block;
-            margin: 10px;
+        /* Button styling */
+        .toggle-btn {
+            background-color: #00bcd4;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
         }
-
-        .portfolio-item img {
-            width: 150px; /* Smaller image size */
-            height: 150px; /* Smaller image size */
-            object-fit: cover;
-            border-radius: 10px;
-        }
-
     </style>
 </head>
 
@@ -205,7 +124,7 @@
 
         <!-- Sidebar -->
         <aside class="sidebar-info">
-             <img src="assets/AHMEDE-min.jpg" alt="Ahmede Sidi Abderrahmane" class="about-image">
+            <img src="assets/AHMEDE-min.jpg" alt="Ahmede Sidi Abderrahmane" class="about-image">
             <h1 class="name">Ahmede Sidi Abderrahmane</h1>
             <p class="title">Junior Strategic Energy Consultant</p>
         </aside>
@@ -224,33 +143,25 @@
         <div class="main-content">
 
            <!-- About Section -->
-<section id="about" class="active">
-    <h2>About Me</h2>
-  
-    <p>
-        I am a passionate and analytical Junior Strategic Energy Consultant with a strong foundation in oil and energy,
-        encompassing both economics and engineering. With a degree in Petroleum Engineering and a Master's in Energy
-        Technology Economics and Management from IFP School in Paris, I have experience in analyzing business needs
-        and implementing effective, data-driven solutions.
-    </p>
-
-    <h3>What I Do</h3>
-    <ul class="service-list">
-        <li class="service-item">
-            <ion-icon name="analytics-outline" class="service-icon"></ion-icon>
-            <span>Market Research: I conduct thorough market research to provide valuable insights for decision-making in the energy sector.</span>
-        </li>
-        <li class="service-item">
-            <ion-icon name="clipboard-outline" class="service-icon"></ion-icon>
-            <span>Strategic Planning: I create strategic plans that align business objectives with the latest energy trends and insights.</span>
-        </li>
-        <li class="service-item">
-            <ion-icon name="stats-chart-outline" class="service-icon"></ion-icon>
-            <span>Data Analysis: I use advanced data analysis tools to interpret energy market data and enhance performance.</span>
-        </li>
-    </ul>
-</section>
-
+            <section id="about" class="active">
+                <h2>About Me</h2>
+                <p>I am a passionate and analytical Junior Strategic Energy Consultant...</p>
+                <h3>What I Do</h3>
+                <ul class="service-list">
+                    <li class="service-item">
+                        <ion-icon name="analytics-outline" class="service-icon"></ion-icon>
+                        <span>Market Research</span>
+                    </li>
+                    <li class="service-item">
+                        <ion-icon name="clipboard-outline" class="service-icon"></ion-icon>
+                        <span>Strategic Planning</span>
+                    </li>
+                    <li class="service-item">
+                        <ion-icon name="stats-chart-outline" class="service-icon"></ion-icon>
+                        <span>Data Analysis</span>
+                    </li>
+                </ul>
+            </section>
 
             <!-- Resume Section -->
             <section id="resume">
@@ -262,24 +173,18 @@
                         <p class="job-title">Business Analyst - Carbon Neutrality Strategy & CCS</p>
                         <p class="company">TotalEnergies, Paris</p>
                         <p class="date">2022 - 2023</p>
-                        <p>
-                            Led initiatives for TotalEnergies' carbon neutrality goals in the Exploration and Production domain. Conducted benchmarking analysis on global carbon neutrality strategies, prepared reports for senior management, and coordinated the Long-Term Plan (LTP) for TotalEnergies' CCS assets.
+                        <button class="toggle-btn" onclick="toggleDescription('exp1')">Show Description</button>
+                        <p id="exp1" class="description">
+                            Led initiatives for TotalEnergies' carbon neutrality goals...
                         </p>
                     </li>
                     <li class="experience-item">
                         <p class="job-title">Business Analyst & Developer</p>
                         <p class="company">ScanToSolve</p>
                         <p class="date">2023 - 2024</p>
-                        <p>
-                            Analyzed user data using Google Data Analytics, identified business needs, and optimized system performance. Worked with cross-functional teams to streamline workflows, improve service delivery, and contributed to the design and implementation of solutions.
-                        </p>
-                    </li>
-                    <li class="experience-item">
-                        <p class="job-title">Reservoir Engineer Intern</p>
-                        <p class="company">LR3E Laboratory, Sfax</p>
-                        <p class="date">Feb 2021 - Jul 2021</p>
-                        <p>
-                            Contributed to a study on reservoir characterization of the Sidi Aïch Formation, Southern Tunisia. Conducted an in-depth analysis of reservoir anisotropy, led field campaigns, and analyzed geophysical data.
+                        <button class="toggle-btn" onclick="toggleDescription('exp2')">Show Description</button>
+                        <p id="exp2" class="description">
+                            Analyzed user data using Google Data Analytics, identified business needs...
                         </p>
                     </li>
                 </ul>
@@ -290,172 +195,39 @@
                         <p class="degree-title">Master of Science in Energy Technology Economics and Management</p>
                         <p class="institution">IFP School, Paris</p>
                         <p class="date">2022 - 2023</p>
-                        <pHere is the continuation of the HTML code with the **Portfolio Section** that includes smaller images:
-
-```html
-                            This program provided a blend of technical and managerial knowledge in the energy sector, focusing on energy economics, technology, and business management. I gained skills in energy market analysis, investment decision-making, and managing global operational activities.
+                        <button class="toggle-btn" onclick="toggleDescription('edu1')">Show Description</button>
+                        <p id="edu1" class="description">
+                            This program provided a blend of technical and managerial knowledge...
                         </p>
                     </li>
                     <li class="education-item">
                         <p class="degree-title">Master of Science in Management in the Energy Industry</p>
                         <p class="institution">Audencia Business School, Nantes</p>
                         <p class="date">2021 - 2022</p>
-                        <p>
-                            Combined energy industry expertise with management skills. The program focused on strategic management, finance, and marketing tailored to the energy industry. It included international exposure, sustainability, and real-world case studies with multinational companies.
+                        <button class="toggle-btn" onclick="toggleDescription('edu2')">Show Description</button>
+                        <p id="edu2" class="description">
+                            Combined energy industry expertise with management skills...
                         </p>
-                    </li>
-                    <li class="education-item">
-                        <p class="degree-title">Bachelor of Engineering in Georesources and Environment</p>
-                        <p class="institution">National Engineering School of Sfax, Tunisia</p>
-                        <p class="date">2019 - 2021</p>
-                    </li>
-                    <li class="education-item">
-                        <p class="degree-title">Bachelor of Engineering in Oil and Gas</p>
-                        <p class="institution">Polytechnic School of Nouakchott, Mauritania</p>
-                        <p class="date">2017 - 2019</p>
                     </li>
                 </ul>
             </section>
 
-            <!-- Portfolio Section -->
-            <section id="portfolio">
-                <h2>Portfolio</h2>
-                <p>To be completed</p> <!-- Label appears once at the top -->
-
-                <!-- Image 1 -->
-                <div class="portfolio-item">
-                    <img src="assets/js/image1.jpg" alt="Portfolio Image 1">
-                </div>
-                
-                <!-- Image 2 -->
-                <div class="portfolio-item">
-                    <img src="assets/js/image2.jpg" alt="Portfolio Image 2">
-                </div>
-
-                <!-- Image 3 -->
-                <div class="portfolio-item">
-                    <img src="assets/js/image3.jpg" alt="Portfolio Image 3">
-                </div>
-
-                <!-- Image 4 -->
-                <div class="portfolio-item">
-                    <img src="assets/js/image4.jpg" alt="Portfolio Image 4">
-                </div>
-
-                <!-- Image 5 -->
-                <div class="portfolio-item">
-                    <img src="assets/js/image5.jpg" alt="Portfolio Image 5">
-                </div>
-
-                <!-- Image 6 -->
-                <div class="portfolio-item">
-                    <img src="assets/js/image6.jpg" alt="Portfolio Image 6">
-                </div>
-
-                <!-- Image 7 -->
-                <div class="portfolio-item">
-                    <img src="assets/js/image7.jpg" alt="Portfolio Image 7">
-                </div>
-
-                <!-- Image 8 -->
-                <div class="portfolio-item">
-                    <img src="assets/js/image8.jpg" alt="Portfolio Image 8">
-                </div>
-
-                <!-- Image 9 -->
-                <div class="portfolio-item">
-                    <img src="assets/js/image9.jpg" alt="Portfolio Image 9">
-                </div>
-
-                <!-- Image 10 -->
-                <div class="portfolio-item">
-                    <img src="assets/js/image10.jpg" alt="Portfolio Image 10">
-                </div>
-
-                <!-- Image 11 -->
-                <div class="portfolio-item">
-                    <img src="assets/js/image11.jpg" alt="Portfolio Image 11">
-                </div>
-
-                <!-- Image 12 -->
-                <div class="portfolio-item">
-                    <img src="assets/js/image12.jpg" alt="Portfolio Image 12">
-                </div>
-
-                <!-- Image 13 -->
-                <div class="portfolio-item">
-                    <img src="assets/js/image13.jpg" alt="Portfolio Image 13">
-                </div>
-
-                <!-- Image 14 -->
-                <div class="portfolio-item">
-                    <img src="assets/js/image14.jpg" alt="Portfolio Image 14">
-                </div>
-
-                <!-- Image 15 -->
-                <div class="portfolio-item">
-                    <img src="assets/js/image15.jpg" alt="Portfolio Image 15">
-                </div>
-
-                <!-- Image 16 -->
-                <div class="portfolio-item">
-                    <img src="assets/js/image16.jpg" alt="Portfolio Image 16">
-                </div>
-
-                <!-- Image 17 -->
-                <div class="portfolio-item">
-                    <img src="assets/js/image17.jpg" alt="Portfolio Image 17">
-                </div>
-
-                <!-- Image 18 -->
-                <div class="portfolio-item">
-                    <img src="assets/js/image18.jpg" alt="Portfolio Image 18">
-                </div>
-
-                <!-- Image 19 -->
-                <div class="portfolio-item">
-                    <img src="assets/js/image19.jpg" alt="Portfolio Image 19">
-                </div>
-            </section>
-
-            <!-- Contact Section -->
-            <section id="contact">
-                <h2>Contact Form</h2>
-                <form class="contact-form" method="POST" action="https://formspree.io/f/mrbgbzzy">
-                    <input type="text" name="fullname" class="form-input" placeholder="Full name" required>
-                    <input type="email" name="email" class="form-input" placeholder="Email address" required>
-                    <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
-                    <button class="form-btn" type="submit">
-                        <ion-icon name="paper-plane"></ion-icon>
-                        <span>Send Message</span>
-                    </button>
-                </form>
-            </section>
-
         </div>
-
     </main>
 
     <!-- JavaScript Links -->
     <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <!-- JavaScript to manage navigation -->
+    <!-- JavaScript for Toggle -->
     <script>
-        const navbarLinks = document.querySelectorAll(".navbar-link");
-        const sections = document.querySelectorAll("section");
-
-        navbarLinks.forEach(link => {
-            link.addEventListener("click", () => {
-                sections.forEach(section => section.classList.remove("active"));
-                navbarLinks.forEach(nav => nav.classList.remove("active"));
-
-                document.getElementById(link.getAttribute("data-nav-link")).classList.add("active");
-                link.classList.add("active");
-            });
-        });
-
-        // Show the "About" section by default
-        document.getElementById('about').classList.add('active');
+        function toggleDescription(id) {
+            const element = document.getElementById(id);
+            if (element.style.display === "none" || element.style.display === "") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
     </script>
 
 </body>
