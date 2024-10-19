@@ -16,33 +16,33 @@
   <style>
     /* Adjust the font size and color of the full name */
     .name {
-      font-size: 12px; /* Smaller font size for the full name */
-      color: #ffffff; /* Lighter color for visibility */
-      white-space: normal; /* Allow the name to wrap */
-      word-break: break-word; /* Ensure long names are wrapped */
+      font-size: 12px;
+      color: #ffffff;
+      white-space: normal;
+      word-break: break-word;
     }
 
-    /* Set the text color for better visibility */
+    /* Brighter color for better visibility */
     .title, .contact-link, .contact-title, .address, .navbar-link {
-      color: #f1f1f1; /* Brighter color */
+      color: #f1f1f1;
     }
 
     /* Highlight active navbar link */
     .navbar-link.active {
-      color: #00bcd4; /* Set active navbar link to cyan */
+      color: #00bcd4;
     }
 
-    /* Set the background color to ensure readability */
+    /* Background color */
     body {
-      background-color: #2a2a2a; /* Dark background */
+      background-color: #2a2a2a;
     }
 
-    /* Set the default state of sections (hidden) */
+    /* Default hidden sections */
     .main-content section {
       display: none;
     }
 
-    /* Ensure the active section is visible */
+    /* Show active section */
     .main-content section.active {
       display: block;
     }
@@ -57,44 +57,28 @@
 
     section {
       padding: 20px;
-      color: #f1f1f1; /* Brighter text color for all sections */
-    }
-
-    /* Styling for experience and education lists */
-    .experience-list, .education-list {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .experience-item, .education-item {
-      margin-bottom: 20px;
-    }
-
-    .job-title, .degree-title {
-      font-weight: bold;
-      color: #00bcd4; /* Cyan for titles */
-    }
-
-    .company, .institution {
-      font-style: italic;
-      color: #f1f1f1; /* Brighter for better visibility */
-    }
-
-    .date {
-      color: #b0bec5; /* Lighter gray for dates */
-    }
-
-    .responsibilities {
-      margin-top: 5px;
-      padding-left: 20px;
       color: #f1f1f1;
     }
 
-    .responsibilities li {
-      margin-bottom: 5px;
+    /* About section styling */
+    .service-list {
+      list-style: none;
+      padding: 0;
     }
 
-    /* Contact form style to match the uploaded image */
+    .service-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .service-icon {
+      font-size: 24px;
+      margin-right: 15px;
+      color: #00bcd4;
+    }
+
+    /* Contact form style */
     .contact-form {
       display: flex;
       flex-direction: column;
@@ -105,7 +89,7 @@
 
     .form-input {
       padding: 10px;
-      background-color: #333; /* Darker background for the input */
+      background-color: #333;
       color: #f1f1f1;
       border: none;
       border-radius: 5px;
@@ -223,9 +207,18 @@
 
         <h3>What I Do</h3>
         <ul class="service-list">
-          <li>Market Research: Conduct thorough market research to provide valuable insights for decision-making in the energy sector.</li>
-          <li>Strategic Planning: Create strategic plans that align business objectives with the latest energy trends and insights.</li>
-          <li>Data Analysis: Use advanced data analysis tools to interpret energy market data and enhance performance.</li>
+          <li class="service-item">
+            <ion-icon name="analytics-outline" class="service-icon"></ion-icon>
+            <span>Market Research: I conduct thorough market research to provide valuable insights for decision-making in the energy sector.</span>
+          </li>
+          <li class="service-item">
+            <ion-icon name="clipboard-outline" class="service-icon"></ion-icon>
+            <span>Strategic Planning: I create strategic plans that align business objectives with the latest energy trends and insights.</span>
+          </li>
+          <li class="service-item">
+            <ion-icon name="stats-chart-outline" class="service-icon"></ion-icon>
+            <span>Data Analysis: I use advanced data analysis tools to interpret energy market data and enhance performance.</span>
+          </li>
         </ul>
       </section>
 
@@ -302,7 +295,8 @@
       <section id="contact">
         <h2>Contact Form</h2>
 
-        <section class="contact-form">
+        <!-- Form sends email using PHP -->
+        <form class="contact-form" method="POST" action="contact.php">
           <input type="text" name="fullname" class="form-input" placeholder="Full name" required>
           <input type="email" name="email" class="form-input" placeholder="Email address" required>
           <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
@@ -310,7 +304,7 @@
             <ion-icon name="paper-plane"></ion-icon>
             <span>Send Message</span>
           </button>
-        </section>
+        </form>
 
       </section>
 
