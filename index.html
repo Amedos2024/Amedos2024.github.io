@@ -18,7 +18,7 @@
 
   <style>
     .name {
-      font-size: 16px; /* Smaller font size */
+      font-size: 14px; /* Smaller font size */
       white-space: normal; /* Allow wrapping */
       word-break: break-word; /* Break long words */
     }
@@ -45,6 +45,16 @@
 
     .about-text p {
       text-align: justify;
+    }
+
+    /* Ensure the main content area doesn't get cut off */
+    .main-content {
+      margin-left: 250px; /* Adjust this according to your layout */
+    }
+
+    /* Ensure that all sections fit properly */
+    section {
+      padding: 20px;
     }
   </style>
 </head>
@@ -332,6 +342,9 @@
         link.classList.add("active");
       });
     });
+
+    // Ensure that the first section (about) is shown on page load
+    document.getElementById('about').classList.add('active');
   </script>
 
 </body>
