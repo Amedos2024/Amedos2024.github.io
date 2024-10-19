@@ -1,4 +1,6 @@
-<?php
+<form class="contact-form" method="POST" action="New Text Document.php">
+
+    <?php
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['fullname'];
     $email = $_POST['email'];
