@@ -26,9 +26,21 @@
 
   <style>
     .name {
-      font-size: 20px; /* Adjust font size to fit the name */
-      white-space: normal; /* Allow wrapping of text */
-      word-break: break-word; /* Ensure long names break correctly */
+      font-size: 18px; /* Slightly smaller font size */
+      white-space: normal; /* Allow wrapping */
+      word-break: break-word; /* Break long words */
+    }
+
+    .info-content {
+      width: 100%; /* Ensure full width */
+    }
+
+    .main-content section {
+      display: none; /* Initially hide all sections */
+    }
+
+    .main-content section.active {
+      display: block; /* Show the active section */
     }
   </style>
 </head>
@@ -134,19 +146,19 @@
 
         <ul class="navbar-list">
           <li class="navbar-item">
-            <button class="navbar-link active" data-nav-link>About</button>
+            <button class="navbar-link active" data-nav-link="about">About</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
+            <button class="navbar-link" data-nav-link="resume">Resume</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
+            <button class="navbar-link" data-nav-link="portfolio">Portfolio</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
+            <button class="navbar-link" data-nav-link="contact">Contact</button>
           </li>
         </ul>
 
@@ -156,7 +168,7 @@
         - #ABOUT
       -->
 
-      <article class="about active" data-page="about">
+      <section id="about" class="active">
         <header>
           <h2 class="h2 article-title">About Me</h2>
         </header>
@@ -209,13 +221,13 @@
           </ul>
         </section>
 
-      </article>
+      </section>
 
       <!--
         - #RESUME
       -->
 
-      <article class="resume" data-page="resume">
+      <section id="resume">
         <header>
           <h2 class="h2 article-title">Resume</h2>
         </header>
@@ -280,13 +292,30 @@
 
         </section>
 
-      </article>
+      </section>
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <section id="portfolio">
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <p>Coming Soon...</p>
+
+        </section>
+
+      </section>
 
       <!--
         - #CONTACT
       -->
 
-      <article class="contact" data-page="contact">
+      <section id="contact">
         <header>
           <h2 class="h2 article-title">Contact</h2>
         </header>
@@ -307,7 +336,7 @@
           </form>
         </section>
 
-      </article>
+      </section>
 
     </div>
 
@@ -323,6 +352,29 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- JavaScript for Navbar Link Switching -->
+  <script>
+    const navbarLinks = document.querySelectorAll(".navbar-link");
+    const sections = document.querySelectorAll("section");
+
+    navbarLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        const targetSection = document.getElementById(link.getAttribute("data-nav-link"));
+
+        sections.forEach(section => {
+          section.classList.remove("active");
+        });
+        
+        navbarLinks.forEach(nav => {
+          nav.classList.remove("active");
+        });
+
+        targetSection.classList.add("active");
+        link.classList.add("active");
+      });
+    });
+  </script>
 
 </body>
 
