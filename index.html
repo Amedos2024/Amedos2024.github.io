@@ -74,57 +74,110 @@
             margin-right: 15px;
             color: #00bcd4;
         }
-
-        /* Resume section styling */
-        .education-list, .experience-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .education-item, .experience-item {
-            margin-bottom: 20px;
-        }
-
-        .job-title, .degree-title {
-            font-weight: bold;
-            color: #00bcd4;
-        }
-
-        .company, .institution {
-            font-style: italic;
-        }
-
-        .date {
-            color: #b0bec5;
-        }
-
-        /* Resume cards */
-        .card {
-            background-color: #444;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        .toggle-details {
-            background-color: #00bcd4;
-            color: white;
-            padding: 8px 12px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-
-        .details {
-            display: none;
-            margin-top: 15px;
-            color: #f1f1f1;
-        }
-
-        .details.active {
-            display: block;
-        }
+            /* Resume section styling */
+            #resume {
+                background-color: #1e1e1e;
+                padding: 40px;
+                border-radius: 12px;
+            }
+        
+            #resume h2 {
+                font-size: 36px;
+                color: #00bcd4;
+                margin-bottom: 30px;
+            }
+        
+            .experience-list, .education-list {
+                list-style: none;
+                padding: 0;
+            }
+        
+            .experience-item, .education-item {
+                display: flex;
+                align-items: flex-start;
+                background-color: #333;
+                padding: 20px;
+                margin-bottom: 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.2s ease;
+            }
+        
+            .experience-item:hover, .education-item:hover {
+                transform: translateY(-5px);
+            }
+        
+            .icon {
+                margin-right: 20px;
+            }
+        
+            .icon ion-icon {
+                font-size: 40px;
+                color: #00bcd4;
+            }
+        
+            .content {
+                flex: 1;
+            }
+        
+            .job-title, .degree-title {
+                font-size: 20px;
+                font-weight: 600;
+                color: #fff;
+            }
+        
+            .company, .institution {
+                font-size: 16px;
+                color: #b0bec5;
+                margin-bottom: 10px;
+            }
+        
+            .date {
+                font-size: 14px;
+                color: #8f8f8f;
+                margin-bottom: 15px;
+            }
+        
+            .toggle-details {
+                background-color: #00bcd4;
+                color: white;
+                padding: 8px 12px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+        
+            .toggle-details:hover {
+                background-color: #0097a7;
+            }
+        
+            .details {
+                display: none;
+                margin-top: 15px;
+                font-size: 16px;
+                color: #f1f1f1;
+                line-height: 1.6;
+            }
+        
+            .details.active {
+                display: block;
+            }
+        
+            /* Smooth animation */
+            .details {
+                opacity: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: all 0.3s ease;
+            }
+        
+            .details.active {
+                opacity: 1;
+                max-height: 300px; /* Adjust height based on content */
+            }
+   
+        
 
         /* Contact form styling */
         .contact-form {
@@ -280,86 +333,233 @@
             </section>
 
 
-            <!-- Resume Section -->
-            <section id="resume">
-                <h2>Resume</h2>
+          <!-- Resume Section -->
+<!-- Resume Section -->
+<section id="resume">
+    <h2>My Journey</h2>
 
-                <h3>Experience</h3>
-                <ul class="experience-list">
-                    <li class="experience-item card">
-                        <p class="job-title">Business Analyst - Carbon Neutrality Strategy & CCS</p>
-                        <p class="company">TotalEnergies, Paris</p>
-                        <p class="date">2022 - 2023</p>
-                        <button class="toggle-details">Show Details</button>
-                        <div class="details">
-                            <p>
-                                Led initiatives for TotalEnergies' carbon neutrality goals in the Exploration and Production domain. Conducted benchmarking analysis on global carbon neutrality strategies, prepared reports for senior management, and coordinated the Long-Term Plan (LTP) for TotalEnergies' CCS assets.
-                            </p>
-                        </div>
-                    </li>
-                    <li class="experience-item card">
-                        <p class="job-title">Business Analyst & Developer</p>
-                        <p class="company">ScanToSolve</p>
-                        <p class="date">2023 - 2024</p>
-                        <button class="toggle-details">Show Details</button>
-                        <div class="details">
-                            <p>
-                                Analyzed user data using Google Data Analytics, identified business needs, and optimized system performance. Worked with cross-functional teams to streamline workflows, improve service delivery, and contributed to the design and implementation of solutions.
-                            </p>
-                        </div>
-                    </li>
-                    <li class="experience-item card">
-                        <p class="job-title">Reservoir Engineer Intern</p>
-                        <p class="company">LR3E Laboratory, Sfax</p>
-                        <p class="date">Feb 2021 - Jul 2021</p>
-                        <button class="toggle-details">Show Details</button>
-                        <div class="details">
-                            <p>
-                                Contributed to a study on reservoir characterization of the Sidi Aïch Formation, Southern Tunisia. Conducted an in-depth analysis of reservoir anisotropy, led field campaigns, and analyzed geophysical data.
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-
-                <h3>Education</h3>
-                <ul class="education-list">
-                    <li class="education-item card">
-                        <p class="degree-title">Master of Science in Energy Technology Economics and Management</p>
-                        <p class="institution">IFP School, Paris</p>
-                        <p class="date">2022 - 2023</p>
-                        <button class="toggle-details">Show Details</button>
-                        <div class="details">
-                            <p>
-                                This program provided a blend of technical and managerial knowledge in the energy sector, focusing on energy economics, technology, and business management. I gained skills in energy market analysis, investment decision-making, and managing global operational activities.
-                            </p>
-                        </div>
-                    </li>
-                    <li class="education-item card">
-                        <p class="degree-title">Master of Science in Management in the Energy Industry</p>
-                        <p class="institution">Audencia Business School, Nantes</p>
-                        <p class="date">2021 - 2022</p>
-                        <button class="toggle-details">Show Details</button>
-                        <div class="details">
-                            <p>
-                                Combined energy industry expertise with management skills. The program focused on strategic management, finance, and marketing tailored to the energy industry. It included international exposure, sustainability, and real-world case studies with multinational companies.
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-
-            <!-- Portfolio Section -->
-            <section id="portfolio">
-                <h2>Portfolio</h2>
-                <p>To be completed</p> <!-- Label appears once at the top -->
-
-                <!-- Image 1 -->
-                <div class="portfolio-item">
-                    <img src="assets/js/image1.jpg" alt="Portfolio Image 1">
+    <h3>Professional Experience</h3>
+    <ul class="experience-list">
+        <li class="experience-item card">
+            <div class="icon">
+                <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+            <div class="content">
+                <h4 class="job-title">Business Analyst - Carbon Neutrality Strategy & CCS</h4>
+                <p class="company">TotalEnergies, Paris, France</p>
+                <p class="date">2022 - 2023</p>
+                <button class="toggle-details">See More</button>
+                <div class="details">
+                    <p>
+                        Led initiatives for TotalEnergies' carbon neutrality goals. Conducted benchmarking analysis on global carbon neutrality strategies, prepared reports for senior management, and coordinated the Long-Term Plan (LTP) for CCS assets.
+                    </p>
                 </div>
+            </div>
+        </li>
+        <li class="experience-item card">
+            <div class="icon">
+                <ion-icon name="analytics-outline"></ion-icon>
+            </div>
+            <div class="content">
+                <h4 class="job-title">Business Analyst & Developer</h4>
+                <p class="company">ScanToSolve</p>
+                <p class="date">2023 - 2024</p>
+                <button class="toggle-details">See More</button>
+                <div class="details">
+                    <p>
+                        Analyzed user data using Google Data Analytics, identified business needs, and optimized system performance. Worked with cross-functional teams to streamline workflows and improve service delivery.
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li class="experience-item card">
+            <div class="icon">
+                <ion-icon name="construct-outline"></ion-icon>
+            </div>
+            <div class="content">
+                <h4 class="job-title">Reservoir Engineer Intern</h4>
+                <p class="company">LR3E Laboratory, Sfax, Tunisia</p>
+                <p class="date">Feb 2021 - Jul 2021</p>
+                <button class="toggle-details">See More</button>
+                <div class="details">
+                    <p>
+                        Contributed to a study on reservoir characterization of the Sidi Aïch Formation, Southern Tunisia. Led field campaigns and analyzed geophysical data.
+                    </p>
+                </div>
+            </div>
+        </li>
+    </ul>
 
-                <!-- Add more images as needed -->
-            </section>
+    <h3>Education</h3>
+    <ul class="education-list">
+        <li class="education-item card">
+            <div class="icon">
+                <ion-icon name="school-outline"></ion-icon>
+            </div>
+            <div class="content">
+                <h4 class="degree-title">MS in Energy Technology Economics and Management</h4>
+                <p class="institution">IFP School, Paris, France</p>
+                <p class="date">2022 - 2023</p>
+                <button class="toggle-details">See More</button>
+                <div class="details">
+                    <p>
+                        Gained skills in energy market analysis, investment decision-making, and managing global operational activities. Focused on a blend of technical and managerial knowledge in the energy sector.
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li class="education-item card">
+            <div class="icon">
+                <ion-icon name="school-outline"></ion-icon>
+            </div>
+            <div class="content">
+                <h4 class="degree-title">MS in Management in the Energy Industry</h4>
+                <p class="institution">Audencia Business School, Nantes, France</p>
+                <p class="date">2021 - 2022</p>
+                <button class="toggle-details">See More</button>
+                <div class="details">
+                    <p>
+                        Combined energy industry expertise with management skills. The program focused on strategic management, finance, and marketing tailored to the energy industry, including international exposure.
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li class="education-item card">
+            <div class="icon">
+                <ion-icon name="school-outline"></ion-icon>
+            </div>
+            <div class="content">
+                <h4 class="degree-title">Bachelor's Degree in Georesources and Environment</h4>
+                <p class="institution">Ecole Nationale Ingénieurs de Sfax, Tunisia</p>
+                <p class="date">2019 - 2021</p>
+                <button class="toggle-details">See More</button>
+                <div class="details">
+                    <p>
+                        Focused on sustainable resource management and environmental impact assessments. Gained hands-on experience with GIS tools and geospatial analysis. Covered areas such as resource exploration, environmental protection, and sustainable extraction techniques. Prepared to contribute to environmental consulting, resource management, and sustainability initiatives.
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li class="education-item card">
+            <div class="icon">
+                <ion-icon name="school-outline"></ion-icon>
+            </div>
+            <div class="content">
+                <h4 class="degree-title">Bachelor's Degree in Oil and Gas</h4>
+                <p class="institution">Ecole Supérieure Polytechnique, Nouakchott, Mauritania</p>
+                <p class="date">2017 - 2019</p>
+                <button class="toggle-details">See More</button>
+                <div class="details">
+                    <p>
+                        Focused on both upstream and downstream operations, including reservoir engineering, drilling, and production optimization. Developed expertise in using industry tools like Eclipse and Petrel for reservoir simulation, and conducted fieldwork to analyze geological formations. Emphasized problem-solving, teamwork, and energy efficiency, preparing for technical roles in the oil and gas industry.
+                    </p>
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>
+
+
+         <!-- Portfolio Section -->
+         <section id="portfolio">
+            <h2>Portfolio</h2>
+            <p>To be completed</p> <!-- Label appears once at the top -->
+
+            <!-- Image 1 -->
+            <div class="portfolio-item">
+                <img src="assets/js/image1.jpg" alt="Portfolio Image 1">
+            </div>
+            
+            <!-- Image 2 -->
+            <div class="portfolio-item">
+                <img src="assets/js/image2.jpg" alt="Portfolio Image 2">
+            </div>
+
+            <!-- Image 3 -->
+            <div class="portfolio-item">
+                <img src="assets/js/image3.jpg" alt="Portfolio Image 3">
+            </div>
+
+            <!-- Image 4 -->
+            <div class="portfolio-item">
+                <img src="assets/js/image4.jpg" alt="Portfolio Image 4">
+            </div>
+
+            <!-- Image 5 -->
+            <div class="portfolio-item">
+                <img src="assets/js/image5.jpg" alt="Portfolio Image 5">
+            </div>
+
+            <!-- Image 6 -->
+            <div class="portfolio-item">
+                <img src="assets/js/image6.jpg" alt="Portfolio Image 6">
+            </div>
+
+            <!-- Image 7 -->
+            <div class="portfolio-item">
+                <img src="assets/js/image7.jpg" alt="Portfolio Image 7">
+            </div>
+
+            <!-- Image 8 -->
+            <div class="portfolio-item">
+                <img src="assets/js/image8.jpg" alt="Portfolio Image 8">
+            </div>
+
+            <!-- Image 9 -->
+            <div class="portfolio-item">
+                <img src="assets/js/image9.jpg" alt="Portfolio Image 9">
+            </div>
+
+            <!-- Image 10 -->
+            <div class="portfolio-item">
+                <img src="assets/js/image10.jpg" alt="Portfolio Image 10">
+            </div>
+
+            <!-- Image 11 -->
+            <div class="portfolio-item">
+                <img src="assets/js/image11.jpg" alt="Portfolio Image 11">
+            </div>
+
+            <!-- Image 12 -->
+            <div class="portfolio-item">
+                <img src="assets/js/image12.jpg" alt="Portfolio Image 12">
+            </div>
+
+            <!-- Image 13 -->
+            <div class="portfolio-item">
+                <img src="assets/js/image13.jpg" alt="Portfolio Image 13">
+            </div>
+
+            <!-- Image 14 -->
+            <div class="portfolio-item">
+                <img src="assets/js/image14.jpg" alt="Portfolio Image 14">
+            </div>
+
+            <!-- Image 15 -->
+            <div class="portfolio-item">
+                <img src="assets/js/image15.jpg" alt="Portfolio Image 15">
+            </div>
+
+            <!-- Image 16 -->
+            <div class="portfolio-item">
+                <img src="assets/js/image16.jpg" alt="Portfolio Image 16">
+            </div>
+
+            <!-- Image 17 -->
+            <div class="portfolio-item">
+                <img src="assets/js/image17.jpg" alt="Portfolio Image 17">
+            </div>
+
+            <!-- Image 18 -->
+            <div class="portfolio-item">
+                <img src="assets/js/image18.jpg" alt="Portfolio Image 18">
+            </div>
+
+            <!-- Image 19 -->
+            <div class="portfolio-item">
+                <img src="assets/js/image19.jpg" alt="Portfolio Image 19">
+            </div>
+        </section>
 
             <!-- Contact Section -->
             <section id="contact">
@@ -399,22 +599,22 @@
 
         // Show the "About" section by default
         document.getElementById('about').classList.add('active');
-
-        // Toggle details functionality for resume section
-        const toggleButtons = document.querySelectorAll('.toggle-details');
-
-        toggleButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const details = button.nextElementSibling;
-                if (details.classList.contains('active')) {
-                    details.classList.remove('active');
-                    button.textContent = 'Show Details';
-                } else {
-                    details.classList.add('active');
-                    button.textContent = 'Hide Details';
-                }
+            // Toggle details functionality for resume section
+            const toggleButtons = document.querySelectorAll('.toggle-details');
+        
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const details = button.nextElementSibling;
+                    if (details.classList.contains('active')) {
+                        details.classList.remove('active');
+                        button.textContent = 'See More';
+                    } else {
+                        details.classList.add('active');
+                        button.textContent = 'See Less';
+                    }
+                });
             });
-        });
+        
     </script>
 
 </body>
