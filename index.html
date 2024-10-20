@@ -465,8 +465,7 @@
 
             
 
-
-            <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -474,36 +473,17 @@
     <title>Portfolio</title>
     <style>
         /* Styling for the section titles */
-        h3 {
+        h3, h4 {
             color: #007BFF; /* Title color */
             font-size: 24px;
-            margin-bottom: 10px;
         }
 
         /* Styling for the project content */
-        .portfolio-subsection p, .project p {
+        .project p {
             color: #333; /* Content color (different from title) */
             font-size: 16px;
-        }
-
-        /* Basic styling for the portfolio gallery */
-        .portfolio-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .portfolio-item {
-            width: calc(16.66% - 10px); /* 6 items per row, minus spacing */
-            margin-bottom: 20px;
-            overflow: hidden;
-        }
-
-        .portfolio-item img {
-            width: 100%;
-            height: 150px; /* Fixed height for equal size images */
-            object-fit: cover; /* Ensures images maintain their aspect ratio */
-            border-radius: 8px;
+            margin-bottom: 10px;
+            display: block; /* Ensure block display */
         }
 
         /* Style for the button */
@@ -521,40 +501,11 @@
         .button:hover {
             background-color: #218838; /* Darker green on hover */
         }
-
-        /* Responsive behavior */
-        @media (max-width: 1200px) {
-            .portfolio-item {
-                width: calc(25% - 10px); /* 4 items per row on medium screens */
-            }
-        }
-
-        @media (max-width: 768px) {
-            .portfolio-item {
-                width: calc(33.33% - 10px); /* 3 items per row on tablets */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .portfolio-item {
-                width: calc(50% - 10px); /* 2 items per row on small screens */
-            }
-        }
-
-        @media (max-width: 360px) {
-            .portfolio-item {
-                width: 100%; /* Full width for mobile devices */
-            }
-        }
     </style>
 </head>
 <body>
 
-<!-- Portfolio Section -->
-<section id="portfolio">
-    <h2>Portfolio</h2>
-
-    <!-- Projects Subsection -->
+<!-- Projects Subsection -->
 <div class="portfolio-subsection">
     <h3>Projects</h3>
     <div class="project">
@@ -563,6 +514,7 @@
         <a href="https://rise.articulate.com/share/y5pt87b-AsX-KFKZ9Uz7PVwMNYqwoS4B#/lessons/IYfpUVGqmAKYvteIu8VFbbtH6gMaBR26" class="button" target="_blank">See Details</a>
     </div>
 </div>
+
 
     <!-- Professional Gallery Subsection -->
     <div class="portfolio-subsection">
