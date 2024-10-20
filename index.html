@@ -682,12 +682,10 @@
             });
         });
 
-        // Smooth scroll to contact form when 'Get in Touch' button is clicked
-        document.querySelector('.get-in-touch-btn').addEventListener('click', function(e) {
+        // Scroll to contact section when 'Get in Touch' button is clicked
+        document.getElementById('get-in-touch-btn').addEventListener('click', function(e) {
             e.preventDefault();
-            document.querySelector('#contact').scrollIntoView({
-                behavior: 'smooth'
-            });
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
         });
     </script>
 
