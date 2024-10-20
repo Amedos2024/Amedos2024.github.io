@@ -461,28 +461,48 @@
 
 
 
+
+
             
 
-<!DOCTYPE html>
+
+            <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <style>
+        /* Styling for the section titles */
+        h3 {
+            color: #007BFF; /* Title color */
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        /* Styling for the project content */
+        .portfolio-subsection p, .project p {
+            color: #333; /* Content color (different from title) */
+            font-size: 16px;
+        }
+
         /* Basic styling for the portfolio gallery */
         .portfolio-gallery {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
         }
+
         .portfolio-item {
             width: calc(16.66% - 10px); /* 6 items per row, minus spacing */
             margin-bottom: 20px;
+            overflow: hidden;
         }
+
         .portfolio-item img {
             width: 100%;
-            height: auto;
+            height: 150px; /* Fixed height for equal size images */
+            object-fit: cover; /* Ensures images maintain their aspect ratio */
             border-radius: 8px;
         }
 
@@ -492,14 +512,14 @@
             padding: 10px 20px;
             font-size: 16px;
             color: white;
-            background-color: #007BFF; /* Bootstrap blue color */
+            background-color: #28a745; /* Green button */
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
 
         .button:hover {
-            background-color: #0056b3; /* Darker blue for hover */
+            background-color: #218838; /* Darker green on hover */
         }
 
         /* Responsive behavior */
@@ -658,11 +678,16 @@
     </div>
 </section>
 
-</body>
-</html>
 
             
 
+
+
+
+
+
+
+            
             
         
          </section>
