@@ -333,7 +333,7 @@
 
 
 
-       <!-- About Section -->
+      <!-- About Section -->
 <section id="about" class="active">
     <h2>About Me</h2>
 
@@ -367,6 +367,36 @@
         </a>
     </div>
 </section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2>Contact Form</h2>
+
+    <!-- Contact Form -->
+    <form class="contact-form" method="POST" action="https://formspree.io/f/mrbgbzzy">
+        <input type="text" name="fullname" class="form-input" placeholder="Full name" required>
+        <input type="email" name="email" class="form-input" placeholder="Email address" required>
+        <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
+        <button class="form-btn" type="submit">
+            <ion-icon name="paper-plane"></ion-icon>
+            <span>Send Message</span>
+        </button>
+    </form>
+</section>
+
+<!-- JavaScript for Smooth Scroll -->
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
 
 
 
