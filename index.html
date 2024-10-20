@@ -373,7 +373,7 @@
                 </ul>
 
                 <!-- Get in Touch Button -->
-                <a href="#contact" class="get-in-touch-btn">Get in Touch</a> <!-- Added Button -->
+                <a href="#contact" class="get-in-touch-btn" id="get-in-touch-btn">Get in Touch</a> <!-- Added Button -->
             </section>
 
             <!-- Resume Section -->
@@ -679,6 +679,14 @@
                     details.classList.add('active');
                     button.textContent = 'See Less';
                 }
+            });
+        });
+
+        // Smooth scroll to contact form when 'Get in Touch' button is clicked
+        document.querySelector('.get-in-touch-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#contact').scrollIntoView({
+                behavior: 'smooth'
             });
         });
     </script>
