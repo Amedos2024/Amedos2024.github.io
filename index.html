@@ -1,8 +1,3 @@
-https://formspree.io/register
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -303,6 +298,25 @@ https://formspree.io/register
             background-color: #218838; /* Darker green on hover */
         }
 
+        /* New Get in Touch button styling */
+        .get-in-touch-btn {
+            background-color: #00bcd4;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 20px;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .get-in-touch-btn:hover {
+            background-color: #0097a7;
+        }
+
     </style>
 </head>
 
@@ -357,6 +371,9 @@ https://formspree.io/register
                         <span>Data Analysis: I use advanced data analysis tools to interpret energy market data and enhance performance.</span>
                     </li>
                 </ul>
+
+                <!-- Get in Touch Button -->
+                <a href="#contact" class="get-in-touch-btn">Get in Touch</a> <!-- Added Button -->
             </section>
 
             <!-- Resume Section -->
@@ -595,46 +612,38 @@ https://formspree.io/register
                 </div>
             </section>
 
-            
+            <!-- Contact Section -->
+            <section id="contact">
+                <h2>Contact Form</h2>
 
+                <!-- Contact Form -->
+                <form class="contact-form" method="POST" action="https://formspree.io/f/mrbgbzzy">
+                    <input type="text" name="fullname" class="form-input" placeholder="Full name" required>
+                    <input type="email" name="email" class="form-input" placeholder="Email address" required>
+                    <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
+                    <button class="form-btn" type="submit">
+                        <ion-icon name="paper-plane"></ion-icon>
+                        <span>Send Message</span>
+                    </button>
+                </form>
 
-<!-- Contact Section -->
-<section id="contact">
-    <h2>Contact Form</h2>
+                <!-- LinkedIn Profile -->
+                <div class="linkedin-profile" style="margin-top: 20px; text-align: center;">
+                    <a href="https://www.linkedin.com/in/ahmede-s-99b70314b" target="_blank" style="text-decoration: none; color: #00bcd4;">
+                        <ion-icon name="logo-linkedin" style="font-size: 36px;"></ion-icon>
+                        <p style="color: #f1f1f1; font-size: 18px;">Connect with me on LinkedIn</p>
+                    </a>
+                </div>
 
-    <!-- Contact Form -->
-    <form class="contact-form" method="POST" action="https://formspree.io/f/mrbgbzzy">
-        <input type="text" name="fullname" class="form-input" placeholder="Full name" required>
-        <input type="email" name="email" class="form-input" placeholder="Email address" required>
-        <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
-        <button class="form-btn" type="submit">
-            <ion-icon name="paper-plane"></ion-icon>
-            <span>Send Message</span>
-        </button>
-    </form>
+                <!-- Map Section -->
+                <div class="map-section" style="margin-top: 20px; text-align: center;">
+                    <img src="assets/Paris.PNG" alt="Greater Paris Region Map" style="border-radius: 8px; max-width: 100%; height: auto;">
+                </div>
+            </section>
 
-    <!-- LinkedIn Profile -->
-    <div class="linkedin-profile" style="margin-top: 20px; text-align: center;">
-        <a href="https://www.linkedin.com/in/ahmede-s-99b70314b" target="_blank" style="text-decoration: none; color: #00bcd4;">
-            <ion-icon name="logo-linkedin" style="font-size: 36px;"></ion-icon>
-            <p style="color: #f1f1f1; font-size: 18px;">Connect with me on LinkedIn</p>
-        </a>
-    </div>
+        </div>
 
-    <!-- Map Section -->
-    <div class="map-section" style="margin-top: 20px; text-align: center;">
-        <img src="assets/Paris.PNG" alt="Greater Paris Region Map" style="border-radius: 8px; max-width: 100%; height: auto;">
-    </div>
-</section>
-
-<!-- JavaScript Links -->
-<script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-
-
-
-
-            
+    </main>
 
     <!-- JavaScript Links -->
     <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -676,5 +685,3 @@ https://formspree.io/register
 
 </body>
 </html>
-
-
