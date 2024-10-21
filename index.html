@@ -373,7 +373,7 @@
                 </ul>
 
                 <!-- Get in Touch Button -->
-                <a href="#contact" class="get-in-touch-btn" id="get-in-touch-btn">Get in Touch</a> <!-- Added Button -->
+                <a href="#contact" class="get-in-touch-btn">Get in Touch</a> <!-- Added Button -->
             </section>
 
             <!-- Resume Section -->
@@ -498,9 +498,9 @@
                     </div>
                 </div>
 
-                <!-- Gallery Subsection -->
+                <!-- Professional Gallery Subsection -->
                 <div class="portfolio-subsection">
-                    <h3> Gallery</h3>
+                    <h3>Professional Gallery</h3>
                     <div class="portfolio-gallery">
                         <!-- Images from 1 to 37, excluding 28 and 29 -->
                         <div class="portfolio-item">
@@ -682,10 +682,12 @@
             });
         });
 
-        // Scroll to contact section when 'Get in Touch' button is clicked
-        document.getElementById('get-in-touch-btn').addEventListener('click', function(e) {
+        // Smooth scroll for Get in Touch button
+        document.querySelector('.get-in-touch-btn').addEventListener('click', function(e) {
             e.preventDefault();
-            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('contact').scrollIntoView({
+                behavior: 'smooth'
+            });
         });
     </script>
 
