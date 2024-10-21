@@ -57,12 +57,13 @@
             text-align: center;
         }
 
-        /* Logo Styling */
-        .logo {
-            width: 120px; /* Adjust size */
+        /* Logo on Top Left */
+        .logo-top-left {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 80px; /* Adjust size */
             height: auto;
-            margin-top: 20px;
-            margin-bottom: 20px;
         }
 
         /* What I Do Section */
@@ -270,74 +271,20 @@
             display: none;
         }
 
-        /* Portfolio Image Styling */
-        .portfolio-item {
-            display: inline-block;
-            margin: 10px;
-        }
-
-        .portfolio-item img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-
-        /* Subsection title styling */
-        .portfolio-subsection h3 {
-            color: #ff9800; /* Distinguished color for Portfolio subsections */
-            font-size: 28px;
-            margin-bottom: 15px;
-        }
-
-        /* Button styling for See Details */
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: white;
-            background-color: #28a745; /* Green button */
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: #218838; /* Darker green on hover */
-        }
-
-        /* New Get in Touch button styling */
-        .get-in-touch-btn {
-            background-color: #00bcd4;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 600;
-            margin-top: 20px;
-            display: inline-block;
-            text-decoration: none;
-        }
-
-        .get-in-touch-btn:hover {
-            background-color: #0097a7;
-        }
-
     </style>
 </head>
 
 <body>
+
+    <!-- Logo at Top Left -->
+    <img src="assets/logo(3).png" alt="ASA Logo" class="logo-top-left">
 
     <!-- Main Container -->
     <main class="container">
 
         <!-- Sidebar -->
         <aside class="sidebar-info">
-            <img src="assets/AHMEDE-min.jpg" alt="Ahmede Sidi Abderrahmane" class="about-image">                                                                                                                                                                                                                                                                                                                                                                                                        
-            <img src="assets/logo.jpg" alt="ASA Logo" class="logo"> <!-- Your logo inserted here -->
-
+            <img src="assets/AHMEDE-min.jpg" alt="Ahmede Sidi Abderrahmane" class="about-image">
             <h1 class="name">Ahmede Sidi Abderrahmane</h1>
             <p class="title">Junior Energy Consultant</p>
         </aside>
