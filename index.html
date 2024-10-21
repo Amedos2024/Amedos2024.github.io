@@ -62,8 +62,36 @@
             position: absolute;
             top: 20px;
             left: 20px;
-            width: 150px; /* Increased size for better visibility */
+            width: 150px;
             height: auto;
+        }
+
+        /* Portfolio Gallery Grid */
+        .portfolio-gallery {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr); /* 6 images per row */
+            gap: 10px; /* Add spacing between the images */
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Responsive for tablets */
+        @media (max-width: 1024px) {
+            .portfolio-gallery {
+                grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+            }
+        }
+
+        /* Responsive for mobile */
+        @media (max-width: 768px) {
+            .portfolio-gallery {
+                grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+            }
         }
 
         /* What I Do Section */
@@ -269,14 +297,6 @@
 
         section {
             display: none;
-        }
-
-        /* Portfolio Image Styling */
-        .portfolio-item img {
-            max-width: 150px; /* Restricts the image width to a smaller size */
-            height: auto;
-            object-fit: cover;
-            border-radius: 10px;
         }
 
     </style>
