@@ -373,7 +373,7 @@
                 </ul>
 
                 <!-- Get in Touch Button -->
-                <a href="#contact" class="get-in-touch-btn">Get in Touch</a> <!-- Added Button -->
+<a href="#contact" class="get-in-touch-btn">Get in Touch</a> <!-- Button to scroll to contact -->
             </section>
 
             <!-- Resume Section -->
@@ -684,8 +684,6 @@
         });
 
         // Smooth scroll for Get in Touch button
-        document.querySelector('.get-in-touch-btn').addEventListener('click', function(e) {
-            e.preventDefault();
             document.getElementById('contact').scrollIntoView({
                 behavior: 'smooth'
             });
