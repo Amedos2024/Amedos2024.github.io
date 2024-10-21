@@ -75,8 +75,8 @@
 
         .portfolio-item img {
             width: 100%;
-            height: auto;
-            object-fit: cover;
+            height: 200px; /* Set a fixed height */
+            object-fit: cover; /* Ensure images are the same size */
             border-radius: 10px;
         }
 
@@ -299,6 +299,26 @@
             display: none;
         }
 
+        /* Get in Touch Button */
+        .get-in-touch-btn {
+            background-color: #00bcd4;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .get-in-touch-btn:hover {
+            background-color: #0097a7;
+        }
+
     </style>
 </head>
 
@@ -358,7 +378,7 @@
                 </ul>
 
                 <!-- Get in Touch Button -->
-                <a href="#contact" class="get-in-touch-btn">Get in Touch</a> <!-- Added Button -->
+                <a href="#contact" class="get-in-touch-btn">Get in Touch</a>
             </section>
 
             <!-- Resume Section -->
