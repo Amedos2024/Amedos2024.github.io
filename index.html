@@ -29,6 +29,10 @@
             font-size: 32px;
         }
 
+        .portfolio-subsection h3 {
+            color: #ff9800; /* Different color for subsection titles */
+        }
+
         .about-image {
             width: 150px;
             height: 150px;
@@ -92,6 +96,34 @@
             .portfolio-gallery {
                 grid-template-columns: repeat(2, 1fr); /* 2 images per row */
             }
+        }
+
+        /* Button for See Details */
+        .see-details-btn {
+            background-color: #00bcd4;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            text-decoration: none;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .see-details-btn:hover {
+            background-color: #0097a7;
+        }
+
+        /* Hidden project description */
+        .project-description {
+            display: none;
+            margin-top: 15px;
+        }
+
+        .project-description.active {
+            display: block;
         }
 
         /* What I Do Section */
@@ -202,19 +234,6 @@
             display: block;
         }
 
-        /* Smooth animation */
-        .details {
-            opacity: 0;
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .details.active {
-            opacity: 1;
-            max-height: 300px; /* Adjust height based on content */
-        }
-
         /* Contact form styling */
         .contact-form {
             display: flex;
@@ -299,26 +318,6 @@
             display: none;
         }
 
-        /* Get in Touch Button */
-        .get-in-touch-btn {
-            background-color: #00bcd4;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 20px;
-            transition: background-color 0.3s ease;
-        }
-
-        .get-in-touch-btn:hover {
-            background-color: #0097a7;
-        }
-
     </style>
 </head>
 
@@ -378,7 +377,7 @@
                 </ul>
 
                 <!-- Get in Touch Button -->
-                <a href="#contact" class="get-in-touch-btn">Get in Touch</a>
+                <a href="#contact" class="see-details-btn">Get in Touch</a>
             </section>
 
             <!-- Resume Section -->
@@ -498,8 +497,33 @@
                     <h3>Projects</h3>
                     <div class="project">
                         <h4>Energy Bulletin</h4>
-                        <p>This project focuses on providing insights into energy trends and developments.</p>
-                        <a href="https://rise.articulate.com/share/y5pt87b-AsX-KFKZ9Uz7PVwMNYqwoS4B#/lessons/IYfpUVGqmAKYvteIu8VFbbtH6gMaBR26" class="button" target="_blank">See Details</a>
+                        <button class="see-details-btn" onclick="window.open('https://rise.articulate.com/share/y5pt87b-AsX-KFKZ9Uz7PVwMNYqwoS4B#/lessons/IYfpUVGqmAKYvteIu8VFbbtH6gMaBR26', '_blank')">See Details</button>
+                    </div>
+                    <div class="project">
+                        <h4>Solving The Net-Zero-Equation For Norway</h4>
+                        <button class="see-details-btn">See Details</button>
+                        <div class="project-description">
+                            <p>
+                                I contributed to an in-depth analysis and report titled "Solving The Net-Zero-Equation For Norway" under the guidance of Professor Maxime Schenckery. The project focused on outlining Norway's pathway to achieving net-zero emissions by 2050. This involved identifying key technological innovations, necessary economic adjustments, and societal changes that Norway, as one of the world’s largest oil and gas producers, must implement to align with its climate targets.
+                                <br><br>
+                                In my role, I analyzed technological innovations and supply chain requirements, with an emphasis on green technologies such as carbon capture and storage (CCS), hydrogen, and biofuels. Additionally, I examined Norway's advancements in renewable energy, including hydropower, solar, and wind, which place the country at the forefront of Europe's energy transition.
+                                <br><br>
+                                The report highlighted nine critical requirements for achieving net-zero emissions, covering physical infrastructure, capital allocation, societal shifts, and governance. Our recommendations aim to support Norway’s goal of cutting greenhouse gas emissions while maintaining energy security and economic stability.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h4>Case Study – Technical and Economic Study of Oil Field Development</h4>
+                        <button class="see-details-btn">See Details</button>
+                        <div class="project-description">
+                            <p>
+                                I participated in a detailed technical and economic analysis focused on developing an oil field in a complex geological environment. My role involved assessing key reservoir characteristics, analyzing petrophysical properties, and evaluating both exploration and appraisal well data to optimize recovery.
+                                <br><br>
+                                The study included geological and petrophysical analysis of formations such as the Pampa and Andes, identifying hydrocarbon potential, and conducting fluid dynamics assessments. Using advanced reservoir simulation and financial modeling, we calculated the oil-in-place (OIIP), reserves, and developed a Field Development Plan (FDP). This involved the strategic placement of production and injection wells to maximize recovery while ensuring optimal economic performance.
+                                <br><br>
+                                The economic analysis considered CAPEX, OPEX, and production forecasts over a 15-year horizon. Our recommendations demonstrated that the field was economically viable with a net profit of $319 million and an NPV of $364 per barrel, confirming the project’s financial feasibility.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
@@ -507,7 +531,6 @@
                 <div class="portfolio-subsection">
                     <h3>Gallery</h3>
                     <div class="portfolio-gallery">
-                        <!-- Images from 1 to 37, excluding 28 and 29 -->
                         <div class="portfolio-item">
                             <img src="assets/js/image1.jpg" alt="Portfolio Image 1">
                         </div>
@@ -672,27 +695,15 @@
         document.getElementById('about').classList.add('active');
         navbarLinks[0].classList.add('active');
 
-        // Toggle details functionality for resume section
-        const toggleButtons = document.querySelectorAll('.toggle-details');
+        // Toggle project descriptions
+        const seeDetailsButtons = document.querySelectorAll('.see-details-btn');
 
-        toggleButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const details = button.nextElementSibling;
-                if (details.classList.contains('active')) {
-                    details.classList.remove('active');
-                    button.textContent = 'See More';
-                } else {
-                    details.classList.add('active');
-                    button.textContent = 'See Less';
+        seeDetailsButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const description = this.nextElementSibling;
+                if (description && description.classList.contains('project-description')) {
+                    description.classList.toggle('active');
                 }
-            });
-        });
-
-        // Smooth scroll for Get in Touch button
-        document.querySelector('.get-in-touch-btn').addEventListener('click', function(e) {
-            e.preventDefault();
-            document.getElementById('contact').scrollIntoView({
-                behavior: 'smooth'
             });
         });
     </script>
